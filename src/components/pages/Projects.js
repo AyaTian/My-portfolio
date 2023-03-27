@@ -12,16 +12,20 @@ const Projects = () => {
           <div className="projects-box">
             <MdOutlineFoodBank className="icon" />
             <h3>Food App</h3>
-            <p>A traditonal japanese resterant</p>
+            <p>
+              This App was build with <em>React Basics & React Hooks</em>
+            </p>
             <a href="https://github.com/AyaTian/food-app" className="btn">
               Github
             </a>
           </div>
           <div className="projects-box">
             <MdOutlineDashboard className="icon" />
-            <h3>Dashboard</h3>
-            <p>A dashboard app</p>
-            <a href="https://github.com/AyaTian/food-app" className="btn">
+            <h3>Todo App</h3>
+            <p>
+              I built this project with <em>React & TypeScript</em>
+            </p>
+            <a href="https://github.com/AyaTian/todo-app" className="btn">
               Github
             </a>
           </div>

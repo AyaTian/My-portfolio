@@ -71,7 +71,7 @@ ul {
   display: none;
 }
 
-.navbar a {
+.nav-menu a {
   color: white;
   text-decoration: none;
   font-size: 1.7rem;
@@ -83,8 +83,8 @@ ul {
   animation-delay: calc(0.2s * var(--i));
 }
 
-.navbar a:hover,
-.navbar a.active {
+.nav-menu a:hover,
+.nav-menu a.active {
   color: var(--main-color);
 }
 
@@ -298,6 +298,11 @@ span {
   margin-top: 1rem;
 }
 
+.projects-box em {
+  text-decoration: underline;
+  font-weight: bold;
+}
+
 .projects-box p {
   font-size: 1.6rem;
   margin: 1rem 0 2rem;
@@ -471,11 +476,11 @@ span {
     flex-wrap: wrap;
   }
 
-  .navbar {
+  .nav-menu {
     display: none;
   }
 
-  .response_nav {
+  .nav-menu.active {
     position: absolute;
     top: 100%;
     left: 0;
@@ -492,7 +497,7 @@ span {
     display: block;
   }
 
-  .navbar a {
+  .nav-menu a {
     display: block;
     font-size: 2rem;
     margin: 1rem 0;

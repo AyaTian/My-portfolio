@@ -1,46 +1,46 @@
 import { AiOutlineMenu, AiOutlineClose } from "react-icons/ai";
-import { useState, useRef } from "react";
-import { NavLink } from "react-router-dom";
+import { useState} from "react";
+import { NavLink, Link } from "react-router-dom";
 
 const NavBar = () => {
-  const navRef = useRef();
-
   const [isNavExpanded, setIsNavExpanded] = useState(false);
 
   const handleToggle = () => {
     setIsNavExpanded(!isNavExpanded);
-    navRef.current.classList.toggle("response_nav");
+  };
+  const closeMobileMenu = () => {
+    setIsNavExpanded(false);
   };
 
   return (
     <header className="header">
-      <NavLink to="/" className="logo">
+      <Link to="/" className="logo" onClick={closeMobileMenu}>
         Protfolio
-      </NavLink>
-      {isNavExpanded ? (
-        <AiOutlineClose
-          className="nav-icon close-icon"
-          onClick={handleToggle}
-        />
-      ) : (
-        <AiOutlineMenu className="nav-icon menu-icon" onClick={handleToggle} />
-      )}
-      <nav className="navbar" ref={navRef}>
+      </Link>
+      <div className="nav-icon" onClick={handleToggle}>
+        {isNavExpanded ? <AiOutlineClose /> : <AiOutlineMenu />}
+      </div>
+      <nav
+        className={isNavExpanded ? "nav-menu active" : "nav-menu"}
+      >
         <NavLink
           to="/"
           className={({ isActive }) => (isActive ? "active" : undefined)}
+          onClick={closeMobileMenu}
         >
           Home
         </NavLink>
         <NavLink
           to="/resume"
           className={({ isActive }) => (isActive ? "active" : undefined)}
+          onClick={closeMobileMenu}
         >
           Resume
         </NavLink>
         <NavLink
           to="/projects"
           className={({ isActive }) => (isActive ? "active" : undefined)}
+          onClick={closeMobileMenu}
         >
           Projects
         </NavLink>
