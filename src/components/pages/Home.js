@@ -53,7 +53,7 @@ const Home = () => {
               <span>
                 <FaRegHandPointRight />
               </span>
-              &nbsp; Playing Badminton
+              &nbsp; Playing badminton
             </li>
             <li>
               <span>

@@ -1,5 +1,5 @@
 import { AiOutlineMenu, AiOutlineClose } from "react-icons/ai";
-import { useState} from "react";
+import { useState } from "react";
 import { NavLink, Link } from "react-router-dom";
 
 const NavBar = () => {
@@ -15,14 +15,12 @@ const NavBar = () => {
   return (
     <header className="header">
       <Link to="/" className="logo" onClick={closeMobileMenu}>
-        Protfolio
+        Yahan
       </Link>
       <div className="nav-icon" onClick={handleToggle}>
         {isNavExpanded ? <AiOutlineClose /> : <AiOutlineMenu />}
       </div>
-      <nav
-        className={isNavExpanded ? "nav-menu active" : "nav-menu"}
-      >
+      <nav className={isNavExpanded ? "nav-menu active" : "nav-menu"}>
         <NavLink
           to="/"
           className={({ isActive }) => (isActive ? "active" : undefined)}
